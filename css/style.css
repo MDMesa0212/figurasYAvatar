@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+    /*box-sizing: border-box; hace margen interna la coloque hacia adentro, para que no sobrepace el tamaño que se a establecido */
+
+}
+/*  root se utiliza para crear variables con valores 
+    que sean repetitivos en el sitio web 
+    como colores, margenes, tamaños, etc..., */
+:root{
+    --primary-color: #00d9ff;
+    --secundary-color: #003444;
+    --tertiary-color: #000000;
+
+}
+
+#capturarDatos{
+    height: auto;
+    background: linear-gradient(13deg, #22c1c3 20%, #003444 ); 
+}
+
+#botoness{
+    background-image: url("../img/fondo\ pagina\ web.jpg");
+}
+
+
+.filaa{
+    margin: 50px 50px;
+    display: flex;
+    border: transparent;
+    border: 2px solid #00d9ff;
+}
+
+.fila{
+    margin: 50px 50px;
+    display: flex;
+    border: transparent;
+    border: 2px solid #00d9ff;
+
+}
+
+
+.filaa .contBotones {
+    width: 50%;
+    background: var(--tertiary-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contBotones .interacciones{
+    font-size: 50px;
+
+    color: transparent;
+    background-image: linear-gradient(to left, #0011ff, #41e9ff, #ea00ff, #00ffff, #0026ff );
+    -webkit-background-clip: text;
+    animation: color 4s linear infinite;
+    background-size: 500%;
+    
+}
+
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+.contBotones button{
+    padding: 6px 16px; 
+    background: var(--secundary-color);
+    color: var(--primary-color);
+    border: 1px solid #000000;
+    font-size: 20px;
+    margin: 12px;
+}
+
+.contBotones button:hover{
+    background: var(--secundary-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 10px #00d9ff, 0 0 40px #00d9ff, 0 0 80px #00d9ff;
+    transition-delay: .1s;
+     
+}
+
+.filaa .contFigura {
+    width: 50%;
+    background: var(--secundary-color);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contFigura h2 {
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+    
+.contFigura #figura {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(to left, #0011ff, #41e9ff, #ea00ff, #00ffff, #0026ff );
+    animation: color 4s linear infinite;
+    background-size: 500%;
+    margin: 100px auto;
+    transition: 1s;
+}
+
+#figura.circulo{
+    border-radius: 50%;
+    transform: rotate(-360deg); /*esta funcion hace que los elementos roten*/
+}
+
+#figura.rombo{
+    transform: rotate(405deg);
+    border-radius: 0%;
+}
+
+
+#figura.triangulo {
+    width: 0; 
+    height: 0; 
+    border-left: 100px solid var(--primary-color);
+    border-top: 50px solid var(--secundary-color);
+    border-bottom: 50px solid var(--secundary-color);
+    transform:rotate(-450deg)
+}
+
+#figura.rectanguloH {
+    width: 250px; 
+    height: 100px; 
+    border: 3px solid #000000;
+    background: var(--primary-color);
+    transform:rotate(360deg)
+}
+
+#figura.rectanguloV {
+    width: 100px; 
+    height: 250px; 
+    border: 3px solid #000000;
+    background: var(--primary-color);
+    transform:rotate(720deg)
+}
+
+#figura.arriba {
+    transform: translatey(-100px);
+}
+
+#figura.abajo {
+    transform: translatey(100px);
+}
+
+#figura.izquierda {
+    transform: translatex(-100px);
+}
+
+#figura.derecha {
+    transform: translatex(100px);
+}
+
+#figura.diagonal {
+    transform: translate(100px, 100px);
+}
+
+#figura.imagen {
+    background: url("../img/galaxia.gif");
+    background-size: cover;
+    transform: scale(1.5);
+}
+
+#figura.circulo4 {
+    width: 100px; 
+    height: 100px; 
+    border: 2px solid #555; 
+    background: var(--primary-color);
+    -moz-border-radius: 0 100% 0 0;
+    -webkit-border-radius: 0 100% 0 0;
+    border-radius: 0 100% 0 0;
+    transform: rotate(360deg);
+}
+
+#figura.pacman{
+    width:0; 
+    height:0; 
+    border-right: 100px solid var(--secundary-color); 
+    border-top: 100px solid var(--primary-color); 
+    border-left: 100px solid var(--primary-color); 
+    border-bottom: 100px solid var(--primary-color); 
+    -moz-border-radius: 100%; 
+    -webkit-border-radius: 100%; 
+    border-radius: 100%;
+    transform: rotate(360deg);
+}
+
+#figura.paralelogramo {
+    width: 150px; 
+    height: 100px; 
+    background: #428bca;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+}
+
+#figura.trapecio {
+    width: 250px;
+    height: 0px;
+    border-right: 60px solid var(--secundary-color);
+    border-left: 60px solid var(--secundary-color);
+    border-bottom: 100px solid var(--primary-color);
+    transform: rotate(360deg);
+}
+
+#figura.ribbon {
+    width: 0px;
+    height: 120px;
+    border-left: 50px solid var(--primary-color);
+    border-right: 50px solid var(--primary-color);
+    border-bottom: 35px solid var(--secundary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+.fila .contform{
+    width: 50%;
+    background: #00fff2;
+    color: #000000;
+    text-align: center;
+    padding: 40px;
+    font-size: 20px;
+}
+
+.fila .contform h2{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.fila .contform p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contform form .formGroup {
+    padding: 10px 70px;
+    text-align: left;
+}
+
+form .contGroup label{
+    display: block;
+}
+
+form .contGroup input{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+form .contGroup select{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+form .contGroup textarea{
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+.contform button{
+    background: #000000;
+    font-size: 15px;
+    padding: 12px 40px;
+    color: aqua;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.contform button:hover{
+    font-size: 30px;
+    color: transparent;
+    background-image: linear-gradient(to left, #000330, #003335, #6d004348, #003b3d, #000330 );
+    -webkit-background-clip: text;
+    animation: color 4s linear infinite;
+    background-size: 500%;
+    box-shadow: 0 0 10px #000b47, 0 0 40px #004d5a, 0 0 80px #b4f4ff;
+    transition-delay: .1s;
+
+}
+@keyframes color {
+    from {
+        background-position: 0% 50%;
+    }
+
+    to {
+        background-position: 100% 50%;
+    }
+}
+
+
+.fila .contAvatar {
+    text-align: center;
+    padding: 40px;
+    background: #6e0033d2;
+    width: 50%;
+    border: 1px solid #000000; 
+}
+
+.fila .contAvatar img {
+    width: 100px;
+
+}
+
+.fila .contAvatar h3 {
+    font-size: 38px;
+    color: aliceblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fila .contAvatar p{
+    color: aliceblue;
+    margin: 12px;
+    font-size: 30px;
+}
+
+#contAvatar.amarillo{
+    background: #ffff00;
+}
+
+#conAvatar.azul{
+    background: #00ccff;
+}
+
+#contAvatar.rojo{
+    background: #ff0000;
+}
+
+#contAvatar.rosado{
+    background: #ff00aa;
+}
+
+#conAvatar.verde{
+    background: #00ff00;
+}
+
+
+
+.btn-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #003444;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+.btn-nava {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #550032;
+    color: #ffffff;
+    padding: 12px 20px;
+    text-decoration: none;
+}
